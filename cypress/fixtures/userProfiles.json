@@ -1,0 +1,16 @@
+[
+  {
+  "name": "newUser",
+  "username": "newUser",
+  "firstName": "firstNameUser",
+  "lastName": "lastNameUser",
+  "password": "new123!"
+  },
+  {
+    "name": "validUser",
+    "username": "defaultUser001",
+    "firstName": "firstNameUser",
+    "lastName": "lastNameUser",
+    "password": "Cowsmoo123!"
+    }    
+]
