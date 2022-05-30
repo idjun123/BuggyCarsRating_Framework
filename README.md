@@ -44,9 +44,12 @@ npm run test
  ┣ 📜package-lock.json
  ┗ 📜package.json
 
-All the tests are included in the integration folder as feature files.
+All the tests are included in the Cypress/integration folder as feature files.
 The 3 different functionalities of the website has been included as a separate feature file.
 The folders with the same names as the feature file will contain all the step definitions.
+
+Test Data can be stored in Cypress/fixtures for tests, and not be hardcoded into step definitions
+Environment variables are stored in cypress.json under the "env" jObject.
 
 ## Reports
 The cypress test runner will have an interactive report after the tests are completed with states and screenshots saved for each step.
