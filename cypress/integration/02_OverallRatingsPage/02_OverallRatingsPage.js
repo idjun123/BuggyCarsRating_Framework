@@ -33,12 +33,13 @@ Then ('The user can see the page with the table of rankings displayed', () =>{
 })
 
 And ('The user clicks on the table header rank to sort the table', () => {
+    cy.intercept('GET', '/prod/models*').as('route');
     cy.get('thead').get("th:nth-child(4)").contains('Rank').click()
+    cy.wait(['@route'])
 })
 
 Then('The user can see the rankings displayed in the correct order', ()=> {
-    cy.intercept('GET', '/prod/models*').as('route');
-    cy.wait(['@route'])
+    
     var i = 1;
     cy.get('table tbody td:nth-child(4)').each(($el) => {
         assert.equal($el.text(), i.toString())
@@ -47,12 +48,12 @@ Then('The user can see the rankings displayed in the correct order', ()=> {
 })
 
 And ('The user clicks on the table header model to sort the table', () => {
+    cy.intercept('GET', '/prod/models*').as('route');
     cy.get('thead').get("th:nth-child(3)").contains('Model').click()
+    cy.wait(['@route'])
 })
 
 Then('The user can see the models displayed in the correct order', ()=> {
-    cy.intercept('GET', '/prod/models*').as('route');
-    cy.wait(['@route'])
     var modelArr = [];
     cy.get('table tbody td:nth-child(3)').each(($el, index) => {
         modelArr[index] = $el.text()
