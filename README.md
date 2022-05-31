@@ -62,6 +62,7 @@ There are currently 7 tests written, with 6 pass, 1 fail. The failing test is an
 npm install --save-dev cypress-select-tests
 ```
 -- To have the html reports save a different html file for each run, to have traceability between different runs/days.
+-- To have the cypress generic steps in functions that can be called to remove repeated use of the same code.
 -- The tests are mainly end to end to show my competence in different areas of automation, as the simpler navigation test scenarios would be good for regression but not fit for showcasing purposes.
 ## Test Approach
 The main test approach I have used was to timebox 30 minutes to learn the website and its functions. 
